@@ -13,6 +13,7 @@ jobs:
 
       - name: Lint Check
         run: npm run lint
+
   test:
     runs-on: ubuntu-latest
     steps:
@@ -24,5 +25,5 @@ jobs:
 
       - name: Test Check
         env: 
-            PORT: ${{ secret.PORT }}
+          PORT: ${{ secrets.PORT }}
         run: npm run test
